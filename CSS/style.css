@@ -6,6 +6,7 @@ body{
 }
 .wrapper{
     max-width: 100vw;
+    height: 100%;
     padding: 30px;
     height: 100vh;
     background-color: rgb(72, 95, 79);
@@ -24,12 +25,14 @@ body{
     font-weight: 100;
 }
 .container{
-    width: 85%;
+    width: 75%;
+    height: 75%;
+    padding: 50px;
     background: url(../images/background.jpg) no-repeat;
     background-size: cover;
-    top: 0;
-    left: 0;
-    transform: translate(10%, 10%);
+    top: 50%;
+    left: 50%;
+    transform: translateX(13%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,14 +51,117 @@ body{
     justify-content: space-between;
 }
 .nav__item{
-
+    font-size: small;
+}
+.nav__item>a{
+    padding: 5px;
+}
+.nav__item>a:hover{
+    border-top: solid 2px;
+}
+.nav__item>a{
+    text-decoration: none;
+    color: white;
+}
+.nav__item-btn{
+    background-color: #fff;
+    border: solid 1px white;
+    border-radius: 25px;
+    text-align: center;
+    color: orange;
+}
+input,button{
+    width: 60px;
+    text-decoration: none;
+    border: none;
+    margin: 0;
+    background: none;
+    color: orange;
+    text-align: center;
+}
+.nav__item-btn>input{
+    transition: all 0.3s ease 0.5s;
+}
+.nav__item-btn>input:hover{
+    width: 150px;
 }
 .title__block{
     width: 36%;
    text-align: center;
 }
 .title{
+    margin-bottom: -10px;
     font-size: 4rem;
     font-weight: 900;
     text-transform: uppercase;
+    line-height: 4rem;
+}
+.subtitle{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+.subtitle__bold{
+    font-weight: 900;
+}
+.title__button{
+    padding: 8px 23px;
+    background-color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    color: orange;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+.footer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: start;
+}
+.logo-media{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    height: 42px;
+    background: url(../images/Logo.png) no-repeat;
+    background-size: cover;
+}
+.media i{
+font-size: 1.25rem;
+margin: 5px;
+}
+@media (max-width:750px){
+    .wrapper{
+        height: 100%;
+    }
+    .container{
+        height: 100%;
+        transform: translateX(0);
+    }
+    .nav__list{
+        flex-direction: column;
+    }
+    .nav__item{
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .subtitle{
+        font-size: 0.8rem;
+    }
+    .title__button{
+        padding: 4px 12px;
+        font-size: 0.6rem;
+    }
+    .footer{
+        margin-top: 50px;
+        justify-content: center;
+    }
 }
